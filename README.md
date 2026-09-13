@@ -22,6 +22,8 @@ claude -p --model claude-fable-5-1 --effort xhigh --output-format stream-json --
 
 Later messages use `--resume <uuid>`. Fable 5 is called similarly.
 
+Note: the Claude Code release as of writing, v2.1.270, adds system reminders to the user turn even with an empty system prompt, among them a claim that a Bash tool is available, which made the models hallucinate tool calls. The runs here therefore use v2.1.257 with CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1, which removes those. Even then, the model still receives a reminder with the account's email address and the current date, which I could not turn off.
+
 I used Alpöge's map as below:
 
 ```
