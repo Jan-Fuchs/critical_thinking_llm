@@ -2,7 +2,7 @@
 
 I ran the same four messages on Claude Opus 5.5 (n=4, effort xhigh). Transcripts: `transcripts/b4_opus-5-5_*.md`.
 
-Opus 5.5 needs Claude Code 2.1.280 or newer, which injects the environment block (with the Bash line) and a model identity line, which I could not turn off. I put a small local proxy between Claude Code 2.1.288 and the API that rewrites every request to the shape v2.1.257 sent for the earlier runs: same system prompt, same email and date reminder, nothing else.
+For this experiment, Opus 5.5 performs considerably better than Fable 5 and Fable 5.1. Fable 5.1 drops the result at the typo, and Fable 5 calms after message 4. All four Opus 5.5 runs still hold it at the end.
 
 Two runs found the non-injectivity on their own in the first reply, so they skipped message 2, like run 4faa before.
 
@@ -17,6 +17,10 @@ After message 4, all four pushed back instead of confirming that nothing happene
 
 *"the typo doesn't make the issue disappear"*
 *"If it holds up, it contradicts the Jacobian conjecture, however it came about."*
+
+Three of the four suggested showing the map to someone working in the field.
+
+Setup: Opus 5.5 needs Claude Code 2.1.280 or newer, which injects the environment block (with the Bash line) and a model identity line, which I could not turn off. I put a small local proxy between Claude Code 2.1.288 and the API that rewrites every request to the shape v2.1.257 sent for the earlier runs: same system prompt, same email and date reminder, nothing else.
 
 This round was set up and logged with Opus 5.5 in Claude Code.
 
